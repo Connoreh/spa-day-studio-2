@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+    <title>Fragments</title>
+</head>
+<body>
+<form method="post" th:action="@{/user}">
+    <input type="text" name="username" th:value="${username}">Username: </input>
+    <input type="email" name="email" th:value="${email}">Email: </input>
+    <input type="password" name="password">Password: </input>
+    <input type="password" name="confirmationPassword">Confirm Password: </input>
+    <input type="submit" value="Submit">
+    <p th:if="${error}" th:text="${error}"></p>
+
+</form>
+</body>
+</html>
